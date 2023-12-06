@@ -10,7 +10,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Corrected code starts here
+    const aboutLink = document.querySelector('a[href="#about"]');
+    const ownerContainer = document.querySelector('.owner-info');
+
+    aboutLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        ownerContainer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+
+
     const menuIcon = document.querySelector(".app-bar__menu");
     const navList = document.querySelector(".nav-list");
     const mainContent = document.querySelector("main");

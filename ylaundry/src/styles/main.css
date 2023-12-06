@@ -103,6 +103,45 @@ nav a {
     font-size: 1.5rem;
 }
 
+.main-section {
+    display: flex;
+}
+
+.content {
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+}
+
+.owner-info {
+    display: flex;
+    justify-content: center;
+}
+
+.owner-info__detail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+#photo {
+    min-width: 20vh;
+    max-width: 30vh;
+    margin-top: 1rem;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.socmed-icons {
+    width: 1.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
 .card {
     display: flex;
     flex-wrap: wrap; 
@@ -117,7 +156,8 @@ nav a {
     flex-direction: column;
     background-color: var(--text);
     padding: 1rem;
-    min-width: 400px; 
+    min-width: 300px; 
+    max-height: 400px;
     height: auto;
     margin: 0 auto;
     height: 100%; 
@@ -175,6 +215,10 @@ footer {
         display: block;
     }
 
+    .main-section {
+        flex-direction: column;
+    }
+
     .card {
         flex-direction: column; 
         align-items: center;
@@ -182,6 +226,15 @@ footer {
 
     .card-content {
         max-width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        padding-bottom: 5vh;
     }
     
 }
