@@ -1,0 +1,302 @@
+:root {
+    --primary: #87C4FF;
+    --secondary: #39A7FF;
+    --accent: #FFEED9;
+    --background: #E0F4FF;
+    --text: #ffffff;
+    --black: #000000;
+    --red: #ff0000;
+    --blue: #0000ff;
+    --green: #4caf50;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+}
+
+header, footer {
+    padding: 1rem 3rem;
+    background-color: var(--secondary);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-bar,
+.app-bar__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-bar h1 {
+    color: var(--text);
+}
+
+.app-bar img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.app-bar__menu {
+    display: none;
+    padding: 4px 6px 0;
+    border-radius: 8px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+nav a {
+    color: var(--text);
+    padding: 14px 28px;
+    font-weight: 800;
+    border-radius: 12px;
+    font-size: 1.35rem;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 1rem 2.5rem;
+}
+
+.hero {
+    width: auto;
+    display: flex;
+    min-height: 90vh;
+    background: url('../../public/assets/images/hero.png') center/cover no-repeat; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.hero-content {
+    text-align: center;
+    margin: 2rem; 
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    position: relative;
+    left: -100%;
+    white-space: nowrap;
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        left: 0;
+    }
+}
+
+.hero-desc {
+    font-size: 1.5rem;
+}
+
+.main-section {
+    display: flex;
+}
+
+.content {
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+}
+
+.owner-info {
+    display: flex;
+    justify-content: center;
+}
+
+.owner-info__detail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.socmed-icons {
+    width: 1.5rem;
+    height: auto;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: center; 
+}
+
+.card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--text);
+    padding: 1rem;
+    min-width: 300px; 
+    max-height: 400px;
+    height: auto;
+    margin: 0 auto;
+    height: 100%; 
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.card-content__image {
+    max-width: 30rem;
+}
+
+.slideshow {
+    width: 30vh;
+    height: 40vh;
+    margin-top: 1rem;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.slide {
+    width: 30vh;
+    height: 40vh;
+    margin-top: 1rem;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--black);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 450%;
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: var(--blue);
+  }
+  
+
+footer {
+    text-align: center;
+    color: var(--text);
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 86px;
+        right: -100%;
+        padding: 1.5rem;
+        border-radius: 12px 0px 0px 12px;
+        background-color: var(--secondary);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        transition: right 0.3s ease;
+    }
+
+    .nav-list.active {
+        display: flex;
+        right: 0;
+    }
+
+    .nav-item {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        padding: 14px 0;
+    }
+    
+    nav a {
+        width: 100%;
+        color: var(--text);
+        text-align: left;
+    }
+
+    nav a:hover {
+        color: var(--primary);
+        background-color: var(--texttext);
+    }
+
+    .app-bar__menu {
+        display: block;
+    }
+
+    .main-section {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .card-content {
+        max-width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        padding-bottom: 5vh;
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    .app-bar {
+        padding: 1.15rem 1.75rem;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-content {
+        max-width: 100%; 
+    }
+}
+
+@media screen and (max-width: 440px) {
+    nav a {
+        font-size: 1.15rem;
+    }
+}
